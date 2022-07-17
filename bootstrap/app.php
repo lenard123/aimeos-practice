@@ -11,6 +11,13 @@
 |
 */
 
+# Fix Reverse Proxy Bug in Gitpod Dev Environment
+if (getenv('USER') === 'gitpod' && $_SERVER['PHP_SELF'] !== 'artisan') {
+    $_SERVER['HTTP_HOST'] = $_SERVER['HTTP_X_FORWARDED_HOST'];
+    $_SERVER['HTTPS'] = 'on';
+} 
+
+
 $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );

@@ -124,7 +124,7 @@ return [
 		'html' => [
 			'basket' => [
 				'cache' => [
-					// 'enable' => false, // Disable basket content caching for development
+					'enable' => false, // Disable basket content caching for development
 				],
 			],
 			'common' => [
@@ -175,7 +175,7 @@ return [
 
 	'mshop' => [
 		'locale' => [
-			// 'site' => '<custom site code>', // used instead of "default"
+			'site' => 'brucgt', // used instead of "default"
 		]
 	],
 
